@@ -5,7 +5,7 @@ authors = [
 ]
 
 # NOTE: version = <external_version>.sse.<sse_version>
-version = "8.2.1.sse.1.0.0"
+version = "8.2.1.sse.1.0.1"
 
 description = \
     """
@@ -18,13 +18,15 @@ with scope("config") as c:
     #c.build_thread_count = "physical_cores"
 
 requires = [
+    "freetype"
 ]
 
 private_build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-centos-7"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "libpng"],
+    ["platform-linux", "arch-x86_64", "os-centos-7", "libspng"],
 ]
 
 # If want to use Ninja, run:
