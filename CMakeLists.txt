@@ -16,6 +16,8 @@ if (BUILD_FRAMEWORK)
   set (BUILD_SHARED_LIBS ON)
 endif ()
 
+set (BUILD_SHARED_LIBS ON)
+
 
 ## Disallow in-source builds, as CMake generated make files can collide with autotools ones
 if (NOT MSVC AND "${PROJECT_BINARY_DIR}" STREQUAL "${PROJECT_SOURCE_DIR}")
@@ -453,6 +455,7 @@ target_include_directories(harfbuzz PUBLIC
                            "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>"
                            "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/harfbuzz>")
 if (HB_HAVE_FREETYPE AND TARGET freetype)
+  message("Linking against freetype")
   target_link_libraries(harfbuzz freetype)
 endif ()
 

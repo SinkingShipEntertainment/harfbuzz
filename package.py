@@ -5,12 +5,9 @@ authors = [
 ]
 
 # NOTE: version = <external_version>.sse.<sse_version>
-version = "8.2.1.sse.1.0.1"
+version = "8.2.1.sse.1.0.2"
 
-description = \
-    """
-    Text shaping engine
-    """
+description = """Text shaping engine"""
 
 with scope("config") as c:
     import os
