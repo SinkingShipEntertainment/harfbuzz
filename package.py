@@ -5,7 +5,7 @@ authors = [
 ]
 
 # NOTE: version = <external_version>.sse.<sse_version>
-version = "8.2.1.sse.1.0.2"
+version = "8.2.1.sse.1.1.0"
 
 description = """Text shaping engine"""
 
@@ -15,15 +15,15 @@ with scope("config") as c:
     #c.build_thread_count = "physical_cores"
 
 requires = [
-    "freetype"
+    "freetype",
+    "libpng",
 ]
 
 private_build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-centos-7", "libpng"],
-    ["platform-linux", "arch-x86_64", "os-centos-7", "libspng"],
+    ["platform-linux", "arch-x86_64", "os-centos-7"],
 ]
 
 # If want to use Ninja, run:
